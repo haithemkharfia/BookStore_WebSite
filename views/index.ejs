@@ -1,0 +1,78 @@
+
+    
+   <%- include('parts/top.ejs')%>
+  <!-- ***** Preloader Start ***** -->
+  <div id="preloader">
+    <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>  
+<!-- ***** Preloader End ***** -->
+
+
+<!-- Page Content -->
+<!-- Banner Starts Here -->
+<div class="banner header-text">
+  <div class="owl-banner owl-carousel">
+    <div class="banner-item-01">
+      <div class="text-content">
+        <h4>*****</h4>
+        <h2>Not just a bookstore</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Banner Ends Here -->
+
+<div class="latest-products">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Latest Books</h2>
+          <a href="/books">view all Books <i class="fa fa-angle-right"></i></a>
+      </div>
+    </div>
+    <% for (let book of books){%>
+        
+      <div class="col-md-4">
+        <div class="product-item">
+                 <% if(verifUSer) {%>
+ <a href="/book/<%= book._id%>" target="_blank"><img src="images/<%= book.image %>" alt=""></a>
+          <div class="down-content">
+            <a href="/book/<%= book._id%>" target="_blank"><h4>      <%-  book.title %>
+            </h4></a>       
+  <% }else{%>
+<img src="images/<%= book.image %>" alt="">
+          <div class="down-content">
+          <h4>      <%-  book.title %>
+            </h4>
+  <% }%>
+
+
+
+            <h6><%-  book.price %> DT </h6>
+            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+            <ul class="stars">
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+              <li><i class="fa fa-star"></i></li>
+            </ul>
+            <span>Reviews (24)</span>
+          </div>
+        </div>
+      </div>    
+      <% }%>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+<%- include('parts/bottom.ejs') %>

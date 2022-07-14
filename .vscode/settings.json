@@ -1,0 +1,8 @@
+{
+    "window.zoomLevel": 2,
+    "editor.mouseWheelZoom": false,
+    "editor.colorDecorators": true,
+    "workbench.preferredDarkColorTheme": "Default Dark+",
+    "window.autoDetectColorScheme": false,
+    "editor.suggest.showCustomcolors": true
+}
